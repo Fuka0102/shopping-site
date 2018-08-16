@@ -203,6 +203,9 @@ hr{
   content: "\f374";
   color: $font;
   }
+  input[type=checkbox]:checked + .sample_label:before {
+	opacity: 1;		/* 要素を表示する */
+}
 
   }//table
 
