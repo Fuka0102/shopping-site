@@ -1,0 +1,533 @@
+@charset "utf-8";
+$brown:rgb(249, 248, 246);
+$font:rgb(136, 127, 105);
+
+html {
+  font-size: 62.5%;
+  background-color:$brown;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+@import "category";
+@import "recent";
+
+img{
+    max-width:100%;
+}
+
+
+
+header{
+    
+    .logo{
+        margin-top:30px;
+    }
+    
+    #header_in{
+        padding-top: 10px;
+        padding-bottom:4px;
+    }
+    
+    @media (max-width: 500px) {
+    .container,img{
+      text-align:center;
+    }
+    
+    .sp_navi,img{
+      text-align:center;
+      }
+    
+  .sp_navi_li{
+    width: 40%;
+    position: absolute;
+    top:110px;
+    right:2%;
+    border: 1px solid #eee;
+    background: white;
+    margin: 0;
+    padding:0;
+    display:none;
+    z-index: 100;
+
+    li{
+
+      list-style: none;
+      margin: 0;
+      padding:0;
+
+      a{
+        display: block;
+        padding: 10px 8px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        text-decoration: none;
+        color:$font;
+      }
+    }//li
+  }//.sp_navi li
+  
+  .pc_navi{
+        display:none;
+    }
+    
+}//@media 
+
+    @media (min-width: 551px) {
+    .sp_navi{
+      display: none;
+    }
+    
+  }//@media (min-width: 551px)
+   
+   
+   .pc_navi_li {
+        text-align:right;
+        margin-top:60px;
+        margin-bottom:0;
+
+    li{
+        display:inline-block;
+        font-size:20px;
+        margin-right:5px;
+        
+    img{
+        margin-left:10px;
+    }
+    }
+   }//.pc_navi_li
+
+}//header
+
+
+
+
+.container{
+   background-color:$brown;
+   
+   .owl-theme .owl-dots{
+       float:left;
+       margin-top:0;
+       
+   .owl-dot {
+       margin-bottom:0;
+   
+   span {
+    width: 20px;
+    height: 5px;
+    margin: 0 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius:0;
+    
+    }
+    
+   }//.owl-dot
+    
+   }
+   
+  .search-box{
+    border:solid 3px block;
+    background-color:#ffffff;
+    padding:15px 30px 40px 20px;
+    
+    #searchBtn4{
+      margin:10px;
+    }
+  
+    #form2{
+     position:relative;
+    }
+    #sbox2{
+     width:100%;
+     height: 50px;
+     padding:2px 30px;
+     position: absolute;
+     left: 0;
+     top: 0;
+     border-radius:2px;
+     border:solid 3px #eaeaea;
+     outline: 0;
+     background-color:$brown;
+    }
+    #sbtn2{
+     height: 50px;
+     position: absolute;
+     right:-20px;
+     top: 0;
+     background:none;
+     color:#666;
+     border:none;
+     font-size:15px;
+     outline: 0;
+    }
+    #sbtn5:hover{
+    color:#7fbfff;
+    }
+    
+  }//search-box
+
+}//container
+
+@mixin menu-bar{
+   background:rgb(136, 127, 105);
+   margin-top:20px;
+   line-height:40px;
+}
+
+@mixin bar-image{
+    margin-left:10px;
+}
+
+ .page-link{
+   @include menu-bar;
+   background-image:url("../images/top/next_icon.png");
+   background-repeat:no-repeat;
+   background-position:right 5px center; 
+
+   img{
+    @include bar-image;
+   }
+   
+ }//page-link
+ 
+ .categories{
+     
+   .cate_bar{
+   @include menu-bar;
+   background-image:url("../images/top/down_icon.png");
+   background-repeat:no-repeat;
+   background-position:right 5px center; 
+  
+   
+   
+   img{
+    @include bar-image;
+   }
+   
+   }
+   
+   li{
+     border:solid 1px $brown;
+     background-color:white;
+     margin:0;
+     background-image:url("../images/top/next_icon_gray.png");
+     background-repeat:no-repeat;
+     background-position:right 5px center; 
+     padding:10px;
+     
+    
+   a{
+     text-decoration:none;
+    
+   }
+   p{
+     color:black;
+     text-align:left;
+     margin-bottom:0;
+   }
+   
+    
+   }//li
+ }//categories
+
+ 
+ .box{
+         border:solid 1px $brown;
+         background-color:white;
+         overflow: hidden;
+         
+ .about{
+     @include menu-bar;
+     margin-top:0;
+     
+     
+     img{
+     @include bar-image;
+     }
+     
+    }
+     
+     .shop-photo1{
+        padding:0;
+        margin:10px ;
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+        
+         @media(max-width:500px){
+           float:left;
+           margin:10px;
+           overflow: hidden;
+           
+           .clearfix:after {
+              clear: both;
+              content: '';
+              display: block;
+            }
+           
+           
+       }
+     }//shop-photo
+     
+         @media(max-width:500px){
+             .explain{
+                 margin:10px;
+             }
+         }
+     
+     .more{
+      display:block;
+      text-align:center;
+      margin:0 auto;
+     }
+     
+     
+ }//box
+ 
+ .box{
+         border:solid 1px $brown;
+         background-color:white;
+         margin-top:20px;
+         overflow: hidden;
+         
+         
+ .shop-info{
+     @include menu-bar;
+     margin-top:0;
+     
+     
+     img{
+     @include bar-image;
+     }
+     }
+     
+     .shop-photo2{
+        padding:0;
+        margin:10px;
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+        
+        @media(max-width:500px){
+           float:left;
+           margin:10px;
+           
+           
+           .clearfix:after {
+              clear: both;
+              content: '';
+              display: block;
+            }
+           
+           .explain{
+              margin:10px;
+           }
+       }
+         
+        
+        
+     }
+     
+     .more{
+      display:block;
+      text-align:center;
+     }
+     
+     
+     
+ }//box
+ 
+
+ 
+ 
+.item-box{
+    display:flex;
+    flex-wrap: wrap; // 折返しの指定
+    width:100%;
+    margin-top:30px;
+    margin-bottom:30px;
+    
+    
+    .item-list{
+        width:32%;
+        background-color:white;
+        padding-top:10px;
+        margin-left:5px;
+        margin-bottom:5px;
+        
+         @media(max-width:550px){
+            width:48%;
+        }
+        
+        
+        img{
+         display:block;
+         margin:0 auto;
+        }
+        
+    }
+} //item-list
+
+.popular-box{
+    display:flex;
+    flex-wrap: wrap; // 折返しの指定
+    width:100%;
+    margin-top:30px;
+    margin-bottom:30px;
+
+    
+    
+    .popular-list{
+        width:32%;
+        background-color:white;
+        padding-top:10px;
+        text-align:center;
+        margin-left:5px;
+        margin-bottom:5px;
+        
+        p{
+            text-align:left;
+        }
+        
+        @media(max-width:500px){
+        width:47%;
+        
+    }
+      
+        
+    }
+} //item-list
+
+ 
+ 
+ @mixin information{
+     margin-top:30px;
+     margin-bottom:0;
+     padding-left:10px;    
+         span{
+             color:black;
+         }
+         p{
+             margin-bottom:10px;
+         }
+     }
+     
+@mixin h6{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-weight:700;
+    padding-left:10px; 
+}
+     
+
+.information-box{
+    width:100%;
+    display:flex;
+     margin-top:30px;
+     
+     @media(max-width:500px){
+        flex-direction:column;
+        
+     }
+
+ .otodoke{
+     
+     background-color:white;
+     width:50%;
+     margin-right:10px;
+     color:rgb(150, 142, 122);
+     font-style:"arial black";
+     
+     img{
+            margin-left:10px;
+        }
+     
+     h6{
+        @include h6;
+     }
+     
+    .deli{
+        @include information;
+        
+     }
+     
+     .post{
+        @include information;
+     }
+        
+     @media(max-width:500px){
+         width:100%;
+          margin-bottom:10px;
+     }
+ }
+ 
+ .pay{
+     background-color:white;
+     width:50%;
+     color:rgb(150, 142, 122);
+     
+     
+      @media(max-width:500px){
+         width:100%;
+         margin-bottom:10px;
+     }
+     
+    h6 {
+          @include h6;
+     }
+     
+     .card{
+         @include information;
+        
+     }
+     
+     .cash{
+        @include information;
+     }//card
+     
+      .bank{
+        @include information;
+     }//bank
+ }
+
+}
+
+footer{
+
+img{
+    display:block;
+    margin-left:auto;
+    margin-top:100px;
+    margin-bottom:10px;
+    
+}
+
+.last-menu{
+    margin-top:15px;
+    text-align:center;
+    
+    p{
+        color:black;
+        font-style:Meirio;
+        font-style:bold;
+        letter-spacing:5px;
+    }
+}
+.copyright{
+     text-align:center;
+
+    p{
+        color:rgb(196, 193, 186)
+
+    }
+  } //copyright
+
+}
+
+

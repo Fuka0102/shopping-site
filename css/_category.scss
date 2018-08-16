@@ -1,0 +1,57 @@
+h6{
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+p{
+   font-family: 'Sawarabi Gothic', sans-serif;
+   font-size:0.8em;
+}
+
+.pan_list{
+    
+background-color:rgb(232,228,218);
+border-radius:10px;
+padding-left:20px;
+
+ ul{
+      margin-bottom:10px;
+  }
+
+.breadcrumb {
+  padding-left:0;
+  margin-left:0;
+
+}
+
+img.breadcrumb li{
+    display:inline;
+    
+}
+
+.breadcrumb li{
+  display:inline;
+  list-style: none;
+  font-weight: normal;
+}
+
+.breadcrumb li:after{
+  content: '/';
+  padding: 0 3px;
+  color:rgb(150, 142, 122);
+}
+
+.breadcrumb li:last-child:after{
+  content: '';
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color:rgb(150, 142, 122)
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+}//pan_list
+
